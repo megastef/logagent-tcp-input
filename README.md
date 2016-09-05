@@ -27,8 +27,8 @@ input:
     bindAddress: 0.0.0.0
     sourceName: tcpTest
 output:
-  # print parsed logs in YAML format to stdout if supress is set false    
-  stdout: yaml # use 'pretty' for pretty json and 'ldjson' for line delimited json (default)
+  # print parsed logs in YAML format to stdout   
+  stdout: yaml 
 ```
 
 4. Start logagent
