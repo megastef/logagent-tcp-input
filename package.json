@@ -1,0 +1,30 @@
+{
+  "name": "logagent-tcp-input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megastef/logagent-tcp-input.git"
+  },
+  "keywords": [
+    "logagent",
+    "plugin",
+    "for",
+    "tcp"
+  ],
+  "author": "Stefan Thies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megastef/logagent-tcp-input/issues"
+  },
+  "homepage": "https://github.com/megastef/logagent-tcp-input#readme",
+  "dependencies": {
+    "fast-safe-stringify": "^1.0.10",
+    "split2": "^2.1.0",
+    "stream-throttle": "^0.1.3"
+  }
+}
