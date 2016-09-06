@@ -1,7 +1,10 @@
 var InputTCP = require('./index.js')
 var net = require('net')
+// simulate LA plugin loading
 function test () {
   var EE = require('events').EventEmitter
+  // Logagent loads the configfrom a yaml file
+  // we simply pass a JSON object
   var config = {
     configFile: {
       input: {
@@ -14,6 +17,7 @@ function test () {
       }
     }
   }
+  // create and start the plugin - normally done by logagent ...
   var plugin = new InputTCP(config, new EE())
   plugin.start()
   // simulate a client
