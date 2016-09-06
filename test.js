@@ -27,6 +27,6 @@ function test () {
   }, 1000)
 }
 
-if (require.main === module && process.argv[2] == 'test') {
+if (require.main === module) {
   test()
 }

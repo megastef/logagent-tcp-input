@@ -6,8 +6,8 @@ var safeStringify = require('fast-safe-stringify')
 /**
  * Constructor called by logagent, when the config file contains tis entry: 
  * input
- *	tcp:
- *	  module: megastef/logagent-input-tcp
+ *  tcp:
+ *    module: megastef/logagent-input-tcp
  *    port: 4545
  *    bindAddress: 0.0.0.0
  *
@@ -51,11 +51,13 @@ InputTCP.prototype.createServer = function () {
         console.log(data, context)
       }
     }).on('error', console.error)
-    // lets retun parsed objects to the client
-    // Logagent will emit "data.parsed" events
-    self.eventEmitter.on('data.parsed', function (data, aContext) {
-      socket.write(safeStringify(data) + '\n')
-    })
+  /*
+  // We could retun parsed objects to the client
+  // Logagent will emit "data.parsed" events
+  self.eventEmitter.on('data.parsed', function (data, aContext) {
+    socket.write(safeStringify(data) + '\n')
+  })
+  */
   })
   var port = this.config.port || 4545
   var address = this.config.bindAddress || '0. 0.0.0'

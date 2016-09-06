@@ -41,5 +41,4 @@ logagent --config myconfig.yml
 
 ```
 cat ../access.log |  nc localhost 45900
-{"logSource":"tcpTest","_type":"access_log_combined","client_ip":"::1","remote_id":"-","user":"-","method":"OPTIONS","path":"* HTTP/1.0","status_code":200,"size":125,"referer":"-","user_agent":"Apache/2.4.7 (Ubuntu) OpenSSL/1.0.1f (internal dummy connection)","@timestamp":"2016-04-03T06:25:08.000Z","message":"OPTIONS * HTTP/1.0"}
 ``` 
