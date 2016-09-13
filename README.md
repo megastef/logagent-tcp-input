@@ -15,20 +15,16 @@ npm i -g @sematext/logagent-tcp-input
 3. configure logagent 
 
 ```
-# Global options
-options:
-  includeOriginalLine: false
-
 input:
-  stdin: true
   tcp: 
     module: @sematext/logagent-tcp-input
     port: 45900
     bindAddress: 0.0.0.0
     sourceName: tcpTest
 output:
-  # print parsed logs in YAML format to stdout   
-  stdout: yaml 
+  elasticsearch:
+    url: http://localhost:9200
+    index: logs
 ```
 
 4. Start logagent
@@ -37,8 +33,8 @@ output:
 logagent --config myconfig.yml
 ```
 
-5. Ship logs to the tcp port and receive parsed JSON
+5. Ship logs to the tcp port and receive parsed JSON in Elasticsearch
 
 ```
-cat ../access.log |  nc localhost 45900
+tail -F  ../access.log |  nc servername 45900
 ``` 
