@@ -1,5 +1,5 @@
 {
-  "name": "logagent-tcp-input",
+  "name": "@sematext/logagent-tcp-input",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

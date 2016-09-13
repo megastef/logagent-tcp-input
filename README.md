@@ -5,12 +5,12 @@ Plugin to receive log data via TCP and send parsed JSON back to the client.
 1. Install logagent 2.x 
 
 ```
-npm i sematext/logagent-js#2.x -g
+npm i -g @sematext/logagent
 ```
 
 2. Install this plugin 
 ```
-npm i megastef/logagent-tcp-input -g 
+npm i -g @sematext/logagent-tcp-input  
 ```
 3. configure logagent 
 
@@ -22,7 +22,7 @@ options:
 input:
   stdin: true
   tcp: 
-    module: logagent-tcp-input
+    module: @sematext/logagent-tcp-input
     port: 45900
     bindAddress: 0.0.0.0
     sourceName: tcpTest
